@@ -1,3 +1,9 @@
-export function rubricaExcelente() {
-
+export function rubricaExcelente(puntuacion) {
+  if (puntuacion < 0 || puntuacion > 11) {
+    return "Puntuacion invalida";
+  }
+  if (puntuacion > 8) {
+    return "Excelente";
+  }
+  return puntuacion >= 5 ? "Aprobado" : "Reprobado";
 }
